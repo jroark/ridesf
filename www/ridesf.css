@@ -1,0 +1,253 @@
+@charset "utf-8";
+body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #99b3cc;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.twoColElsRtHdr #container {
+	width: 850px;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #d1d0cd; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left;
+	margin: 20px auto;
+}
+.twoColElsRtHdr #header {
+	background: #d1d0cd;/*#ebe6dc;*/
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-top: 10px;
+}
+.twoColElsRtHdr #header h1 {
+	padding: 0 10px;
+	margin-bottom: 5px;
+	margin: 0;
+}
+.twoColElsRtHdr #status {
+	font-size: 10px;
+	padding: 0 10px;
+	margin-bottom: 0px;
+	width: 565px;
+}
+.title {
+	font-size: 12px;
+	padding: 0 10px;
+	font-weight: bold;
+	margin-bottom: 3px;
+	margin-top: 5px;
+}
+.info {
+	font-size: 12px;
+	padding: 0 20px;
+	margin-bottom: 5px;
+}
+.twoColElsRtHdr #mainView {
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+	font-size: 12px;
+	padding: 0 10px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	background: #ffffff;
+}
+.twoColElsRtHdr #user_opts {
+	font: 10px verdania, arial, helvetica, sans-serif;
+	float: right;
+}
+/* Tips for sidebar1:
+1. Be aware that if you set a font-size value on this div, the overall width of the div will be adjusted accordingly.
+2. Since we are working in ems, it's best not to use padding on the sidebar itself. It will be added to the width for standards compliant browsers creating an unknown actual width. 
+3. Space between the side of the div and the elements within it can be created by placing a left and right margin on those elements as seen in the ".twoColElsRtHdr #sidebar1 p" rule.
+*/
+.twoColElsRtHdr #sidebar1 {
+	width: 249px; /* since this element is floated, a width must be given */
+	height: 401px;
+	border-bottom: 1px solid #000000;
+	background: #f2efe9;/*#fffa73;*/ /* top and bottom padding create visual space within this div */
+	float: right;
+	clear: right;
+	margin: 0 auto;
+	overflow: auto;
+}
+.twoColElsRtHdr #sidebar1 h3, .twoColElsRtHdr #sidebar1 p {
+	margin-left: 10px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 10px;
+}
+.twoColElsRtHdr #slider {
+	width: 249px; /* top and bottom padding create visual space within this div */
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	padding: 0;
+	background-color: #f2bf24;/*#b0a490;*/
+}
+.twoColElsRtHdr #findroute {
+	width: 249px; /* top and bottom padding create visual space within this div */
+	padding-top: 10px;
+	padding-right: 0px;
+	padding-bottom: 0;
+	padding-left: 0px;
+	text-align: left;
+}
+.twoColElsRtHdr #directions {
+	overflow: auto;
+	padding-top: 10px;
+}
+.twoColElsRtHdr #thefts {
+	overflow: auto;
+	padding-top: 10px;
+}
+.twoColElsRtHdr #accidents {
+	overflow: auto;
+	padding-top: 10px;
+}
+.twoColElsRtHdr #ratings {
+	overflow: auto;
+	padding-top: 10px;
+}
+.twoColElsRtHdr #footer {
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background: #a7cc95;
+	height: 20px;
+	clear: both;
+}
+.twoColElsRtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear: both;
+	height: 0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.twoColElsRtHdr #map {
+	width: 600px;
+	height: 400px;
+	border-top: solid 1px #000000;
+	border-bottom: solid 1px #000000;
+	border-right: solid 1px #000000;
+	float: right;
+}
+.twoColElsRtHdr #feedback {
+	font-size: 10px;
+}
+.twoColElsRtHdr #options {
+	background: #fffa73;
+	margin: 0 40px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border: solid 1px #ab9e89;
+}
+.dir_table {
+	margin: 0 10px;
+}
+.dir_point {
+	font-size: 14px;
+	font-weight: bold;
+}
+.tableYellow {
+	font-family: "100% Verdana", Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 0;
+	padding: 0 8px;
+}
+.tableGrey {
+	font-family: "100% Verdana", Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 0;
+	padding: 0 8px;
+}
+table {
+	font-family: "100% Verdana", Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 0;
+	padding: 0;
+}
+.tbl_title {
+	font: bold 15px Verdana, Arial, Helvetica, sans-serif;
+	border: 0;
+	padding: 0;
+}
+.tbl_info {
+	font-family: "100% Verdana", Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	border: 0;
+	padding: 0;
+}
+.addrInput {
+	width: 15em;
+}
+.gradeInput {
+	width: 2em;
+	text-align: right;
+}
+a {
+	text-decoration: none;
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+.sfbcAd {
+	position: relative;
+	top: 0px;
+	right: 0px;
+}
+/* begin css tabs */
+
+ul#tabnav { /* general settings */
+	text-align: left; /* set to left, right or center */
+	margin: 0; /* set margins as desired */
+	font: bold 10px verdana, arial, sans-serif; /* set font as desired */
+	border-bottom: 1px solid #000; /* set border COLOR as desired */
+	list-style-type: none;
+	padding: 3px 0px 3px 0px; /* THIRD number must change with respect to padding-top (X) below */
+	width: 250px;
+	position: relative;
+	float: right;
+	left: 10px;
+	top: 1px;
+}
+ul#tabnav li { /* do not change */
+	display: inline;
+}
+body#tab1 li.tab1, body#tab2 li.tab2, body#tab3 li.tab3, body#tab4 li.tab4 { /* settings for selected tab */
+	border-bottom: 1px solid #f2efe9; /* set border color to page background color */
+	background-color: #f2efe9; /* set background color to match above border color */
+}
+body#tab1 li.tab1 a, body#tab2 li.tab2 a, body#tab3 li.tab3 a, body#tab4 li.tab4 a { /* settings for selected tab link */
+	background-color: #f2efe9; /* set selected tab background color as desired */
+	color: #000; /* set selected tab link color as desired */
+	position: relative;
+	top: 1px;
+	padding-top: 3px; /* must change with respect to padding (X) above and below */
+}
+ul#tabnav li a { /* settings for all tab links */
+	padding: 3px 3px; /* set padding (tab size) as desired; FIRST number must change with respect to padding-top (X) above */
+	background-color: #a7cc95; /* set unselected tab background color as desired */
+	color: #666; /* set unselected tab link color as desired */
+	margin-right: 0px; /* set additional spacing between tabs as desired */
+	text-decoration: none;
+	border-bottom: none;
+	border-top: 1px solid #000;
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+ul#tabnav a:hover { /* settings for hover effect */
+	background: #f2efe9; /* set desired hover color */
+}
+
+/* end css tabs */

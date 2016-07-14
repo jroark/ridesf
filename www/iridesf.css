@@ -1,0 +1,153 @@
+/* @override http://ridesf.com/beta/iridesf.css */
+
+/*.toolbar > h1 {
+	width: 180px;
+	}
+
+body {
+	    color: #FFFFFF;
+    background: #000000;
+}
+*/
+fieldset div {
+}
+fieldset ul {
+}
+
+fieldset ul > li:first-child {
+    margin-top: -10px;
+}
+
+fieldset ul > li:last-child {
+    margin-bottom: -10px;
+    border: none;
+}
+
+fieldset ul > li {
+    position: relative;
+    margin: 0 0 0 -38px;
+    border-bottom: 1px solid #bbb;
+    padding: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: normal;
+    list-style: none;
+}
+
+fieldset ul > li > a {
+    display: block;
+    margin:  0px 0 -8px -2px;
+    padding: 8px 32px 8px 14px;
+    text-decoration: none;
+    color: inherit;
+    background: url(iui/listArrow.png) no-repeat right center;
+    text-align: left;
+}
+
+fieldset.search-form {
+    margin-top: -4px;
+}
+
+a.view-schedule {
+    margin-top: -10px;
+}
+
+a {
+	color: #042f70;
+	text-shadow: rgba(0, 0, 0, 0.2) 1px 1px 0;
+}
+
+.msg {
+    margin: 0 0 6px 0;
+    text-align: center;
+    color: #333;
+    text-shadow: rgba(255, 255, 255, 0.5) 1px 1px 0;
+}
+
+.msg a {
+    text-decoration: none;
+}
+
+
+.footer {
+    margin-top: 10px;
+    height: 30px;
+    float: right;
+    /*text-decoration: none;*/
+}
+
+.right {
+    float: right;
+    text-align: right;
+}
+
+body>ul>li>ol {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	text-align: right;
+}
+
+ol>li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body > ul > li.group .time{
+	display: block;
+	margin-right: 248px;
+	text-align: right;
+	}
+
+ol>li.departure {
+	margin: 0 258px 0 0;
+	text-align: right;
+}
+
+ol>li.dash {
+	color: #666666;
+	margin: -23px 240px 0 0;
+	text-align: right;
+}
+
+
+ol>li.arrival {
+	margin: -23px 180px 0 0;
+	text-align: right;
+}
+	
+li>.duration {
+	margin: -21px 10px 0px 0px;
+	text-align: right;
+    color: #666;
+}
+
+
+
+li>.train {
+	color: #999999;
+	font-weight: normal;
+	font-size: 16px;
+	text-align: right;
+	margin: -21px 80px 0 0;
+}
+
+
+
+
+body>ul>li.info {
+	color: #666666;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+select {
+	font-size: 20px;
+	font-weight: bold;
+	text-shadow: rgba(255, 255, 255, 0.7) 0 1px 0;
+}
+
+div#ads {
+	position: absolute;
+}
+

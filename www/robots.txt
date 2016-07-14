@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /beta/
+Disallow: /iui/
+Disallow: /php.ini
+Disallow: /ridesf_conf.php
+
+

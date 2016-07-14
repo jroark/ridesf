@@ -1,0 +1,17 @@
+# convert shape file to sql
+shp2pgsql -s 4326 -i -I sf_streets.shp sf_streets > sf_streets.sql
+
+# assign vertex
+SELECT assign_vertex_id('sf_streets', 0.00001, 'the_geom', 'gid');
+
+# postgres user errors
+psql -U postgres sf_streets
+psql: FATAL:  Ident authentication failed for user "postgres"
+
+# or when running test.sh
+"error": "fe_sendauth: no password supplied"
+
+# edit /var/lib/pgsql/data/pg_hba.conf
+# change md5 for local IPv4 sockets to trust
+# restart postgres
+/etc/init.d/postgresql restart

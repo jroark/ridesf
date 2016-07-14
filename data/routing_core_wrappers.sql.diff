@@ -1,0 +1,11 @@
+--- /usr/share/postlbs/routing_core_wrappers.sql	2008-09-29 19:51:40.000000000 -0700
++++ routing_core_wrappers.sql	2009-12-09 16:34:26.000000000 -0700
+@@ -969,7 +969,7 @@ BEGIN
+ 	id :=0;
+ 	query := 'SELECT gid,the_geom FROM ' || 
+            'shortest_path_astar(''SELECT gid as id, source::integer, ' || 
+-           'target::integer, length::double precision as cost, ' || 
++           'target::integer, (length*cost)::double precision as cost, ' || 
+            'x1::double precision, y1::double precision, ' || 
+            'x2::double precision, y2::double precision ';
+ 	   
